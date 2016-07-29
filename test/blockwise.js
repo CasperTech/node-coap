@@ -11,7 +11,7 @@ var coap        = require('../')
   , generate    = require('coap-packet').generate
   , getOption   = require('../lib/helpers').getOption
   , parseBlock2 = require('../lib/helpers').parseBlock2
-  , dgram       = require('dgram')
+  , dgram       = require('node-dgram-dtls')
 
 describe('blockwise2', function() {
   var server

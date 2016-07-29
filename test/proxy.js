@@ -9,7 +9,7 @@
 var coap      = require('../')
   , parse     = require('coap-packet').parse
   , generate  = require('coap-packet').generate
-  , dgram     = require('dgram')
+  , dgram     = require('node-dgram-dtls')
   , bl        = require('bl')
   , request   = coap.request
   , tk        = require('timekeeper')
