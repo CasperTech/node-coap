@@ -15,7 +15,7 @@ var optionsConv     = require('./lib/option_converter')
   , globalAgent     = new Agent({ type: 'udp4' })
   , globalAgentV6   = new Agent({ type: 'udp6' })
 
-module.exports.request = function(url) {
+module.exports.request = function(url, options) {
   var agent, req, ipv6
 
   if (typeof url === 'string')
@@ -33,7 +33,7 @@ module.exports.request = function(url) {
     agent = globalAgentV6
   else
     agent = globalAgent
-
+  agent.setRequestOptions(options);
   return agent.request(url)
 }
 
